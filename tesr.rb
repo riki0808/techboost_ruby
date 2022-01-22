@@ -1,22 +1,35 @@
-puts "初めてのRuby"
-puts "Ruby" + "始めました"
-puts 3 + 3
-puts 3 - 3
-puts 3 * 3
-puts 3 / 3
-num_array = [1, 2, 3, 4]
-p num_array
-profile = { name: "riki", birth: "1996/08/08", type: "B" }
-puts profile
+n = 3
 
-def plus_ruby(text)
-  puts (text) + "ruby"
+if n == 3 
+  puts "nは3です"
 end
 
-plus_ruby("riki")
-
-def plus_one(num)
-  puts (num).next
+if n == 3 || n == 4
+  puts "3、4のどちらかです"
 end
 
-plus_one(5)
+if n == 3
+  puts "nは3です"
+elsif n == 4
+  puts "nは4です"
+end
+
+for greet in 1..5 do
+  puts "こんにちは"
+end
+
+[1,2,3,4,5].each do |num|
+  puts num
+end
+
+[1,2,3,4,5].each do |num|
+  
+  if num == 2
+    puts "2です"
+  elsif num == 3
+    puts "3です"
+  else
+    puts "それ以外です"
+  end
+  
+end
