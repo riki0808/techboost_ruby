@@ -1,35 +1,27 @@
-n = 3
-
-if n == 3 
-  puts "nは3です"
-end
-
-if n == 3 || n == 4
-  puts "3、4のどちらかです"
-end
-
-if n == 3
-  puts "nは3です"
-elsif n == 4
-  puts "nは4です"
-end
-
-for greet in 1..5 do
-  puts "こんにちは"
-end
-
-[1,2,3,4,5].each do |num|
-  puts num
-end
-
-[1,2,3,4,5].each do |num|
+class People
   
-  if num == 2
-    puts "2です"
-  elsif num == 3
-    puts "3です"
-  else
-    puts "それ以外です"
+  attr_accessor :name
+  
+  def initialize
+    puts "Peopleのインスタンスが作られました"
+  end
+  
+  def self.greet
+    puts "私はPeopleクラスです"
   end
   
 end
+
+# human = People.new
+# human.name = "りき"
+# puts human.name
+# People.greet
+
+
+class ChildPeople < People
+  def self.text
+    puts "私は目からビームが出せます"
+  end
+end
+
+ChildPeople.text
